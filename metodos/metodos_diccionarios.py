@@ -24,3 +24,7 @@ print(datos_personales)
 # El método POP elimina un elemento por su clave
 datos_personales.pop('rut')
 print(datos_personales)
+
+# El método CLEAR limpia completamente el diccionario
+datos_personales.clear()
+print(datos_personales)
