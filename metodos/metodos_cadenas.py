@@ -1,44 +1,73 @@
-nombre_personal = "agustin riquelme"
-titulo_personal = "estudiante"
-ciudad = "TEMUCO"
-rut_completo = "225855404"
-rut_cpersonal = "22585540-4"
-# El metodo Dir nos indida todos los metods disponibles para la variable
-#print(dir[nombre_personal])
+nombre_personal = 'erick bailey'
+titulo_personal = 'Desarrollador .Net Fullstack'
+ciudad = 'TEMUCO'
+cadena_texto_vacia = ''
+cadena_texto_numeros = '123456'
+rut_personal = '12824290-2'
+rut_completo = '128242902'
 
-#Metodos de cadena, modifican el string asociado
-#CAPITALIZE deja la primera letra de un string en mayuscula
-print(f"Su nombre personal CAPITALIZADO: {nombre_personal.capitalize()}")
-#UPPER deja toda el STRING en mayusculas
-print(f"Su nombre personal MAYÚSCULAS: {nombre_personal.upper()}")
-#TILTLE deja la primera letra de cada palabra en mayuscula
-print(f"Su nombre personal como TITULO: {nombre_personal.title()}")
-#LOWER deja todo el STRING en minusculas
-print(f"Ciudad en MINUSCULAS: {ciudad.lower()}")
+texto_multiple_lineas = '''Lorem ipsum dolor sit amet, 
+consectetur adipiscing elit. Cras eget diam purus. 
+Phasellus interdum velit quis massa tempor, 
+at aliquet arcu congue. Mauris eu nisl eget leo finibus volutpat. 
+Donec commodo sed leo quis molestie. Phasellus in placerat velit. 
+Nam vel lorem quis lorem tempus fringilla eget vitae ligula. 
+Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+Nunc eget vestibulum tellus, eget semper odio. Aliquam at varius felis. 
+Vestibulum sagittis mauris tristique, tempor magna vel, egestas mauris. 
+Curabitur vestibulum euismod dolor at pulvinar. 
+Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+ per inceptos himenaeos.'''
 
-#COUNT cuenta la cantidad de ocurrencias de un evento o caracter
+# El método DIR, nos indica todos los métodos disponibles para la variable
+# print(dir(nombre_personal))
+
+# Métodos de cadena, modifican el STRING asociado
+# CAPITALIZE deja la primera letra de un string en mayúsculas
+print(f'Su nombre personal CAPITALIZADO: {nombre_personal.capitalize()}')
+# UPPER deja todo el STRING en mayúsculas
+print(f'Su nombre personal MAYÚSCULAS: {nombre_personal.upper()}')
+# TITLE deja la primera letra de cada palabra en mayúscula
+print(f'Su nombre personal como TÍTULO: {nombre_personal.title()}')
+# LOWER deja todo el STRING en minúsculas
+print(f'Ciudad en MINÚSCULAS: {ciudad.lower()}')
+
+# COUNT cuenta la cantidad de ocurrencias de un caracter
+print(titulo_personal.count('e'))
+# COUNT devuelve 0 si no encuentra el caracter buscado
 print(titulo_personal.count('x'))
-#COUNT devulve 0 si no encuentra el caracter buscado
 
-#FIND busca un SUBSTRING dentro de una cadena y devuelve el indice donde se encuentra
-print(titulo_personal.find('Tecnico'))
-#FIND devuelve -1 si no encuentra el SUBSTRING 
+# FIND busca un SUBSTRING dentro de una cadena y devuelve el índice donde se encuentra
+print(titulo_personal.find('llador'))
+# FIND devuelve -1 si no encuentra el SUBSTRING
+print(titulo_personal.find('x'))
+# INDEX busca un SUBSTRING dentro de una cadena y devuelve el índice donde se encuentra
+print(titulo_personal.index('llador'))
+# INDEX devuelve ERROR si no encuentra el SUBSTRING, 
+# porque no puede contar el índice de lo que no existe
+# print(titulo_personal.index('x'))
 
-#INDEX devuelve ERROR si no encuentra el SUBSTRING, porque no puede contar el indice de lo que no existe
-#print(titulo_personal.index("x"))
-
-#El metodo LEN permite conocer el TAMAÑO (lenght/largo) de los elmentos
+# El método LEN permite conocer el TAMAÑO (length/largo) de los elementos
 print(len(nombre_personal))
+print(len(texto_multiple_lineas))
 
-#Obteniendo SUBSTRING desde cadenas
-#SPLIT divide la cadena de texto
-titulo_personal_split = titulo_personal.split(' ')
+# Obteniendo SUBSTRING desde cadenas
+titulo_personal_split = titulo_personal.split(' ');
 print(titulo_personal_split)
-#El resultado de SPLIT se vuelve una lista,y el caracter usado para el split se elimina
 print(type(titulo_personal_split))
 print(titulo_personal_split[0])
 
-rut_split = rut_cpersonal.split('-')
+titulo_personal_split_e = titulo_personal.split('e');
+print(titulo_personal_split_e)
+
+rut_split = rut_personal.split('-')
 print(rut_split)
-print(f"Rut : {rut_split[0]}")
-#....
+print(f'Rut: {rut_split[0]}')
+print(f'Dígito Verificador: {rut_split[1]}')
+
+rut_completo_split = rut_completo.split()[-1]
+print(rut_completo_split[-1])
+
+# REPLACE permite reemplazar substring dentro de una cadena de texto
+nombre_modificado = nombre_personal.replace('erick','Torch')
+print(nombre_modificado)
