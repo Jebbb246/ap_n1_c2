@@ -9,3 +9,26 @@
 # °F a K = (°F - 32) / 1,8 + 273
 # K a °F = (K - 273) * 1,8 + 32
 
+print('"C" para Celsius')
+print('"F" para Fahrenheit')
+print('"K" para Kelvin')
+escala_inicial = input('Indique la escala inicial: ')
+str_temperatura = input('Ingrese la temperatura: ')
+escala_final = input('Indique la escala final: ')
+
+#if str_temperatura.isdigit():
+#    temperatura = float(str_temperatura)
+#else:
+#    print('El valor de la temperatura no corresponde')
+
+if escala_inicial == 'F':
+    if escala_final == 'K':
+        resultado = 
+
+    pass
+elif escala_inicial == 'C':
+    pass
+elif escala_inicial == 'K':
+    pass
+else:
+    print('Ingrese un valor válido')
