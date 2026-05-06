@@ -9,6 +9,7 @@
 def suma(a,b):
     # Este será el contenido de la función
     resultado = a + b
+    # Usamos la palabra reservada RETURN para RETORNAR o DEVOLVER el resultado de nuestra FUNCIÓN
     return resultado
 
 def resta(a,b):
@@ -30,23 +31,24 @@ def pedir_datos():
     str_numero_1 = input('Ingrese primer número: ')
     str_numero_2 = input('Inrese segundo número: ')
 
+    # Cuando utilizamos (llamamos) a una función que tiene un RETURN, necesitamos recibir ese valor en una variable
     num_1 = convertir_float(str_numero_1)
     num_2 = convertir_float(str_numero_2)
 
-    if num_1 and num_2 != False:
+    if num_1 and num_2 != None:
         return(num_1,num_2)
     else:
-        return(False,False)
+        return(None,None)
 
 def convertir_float(valor):
     try:
         return float(valor)
     except (ValueError, TypeError):
-        return False
+        return None
 
-
-print('\nBienvenido a Mi primera CALCULADORA')
-print('====================================')
+titulo = 'Bienvenido a CALCULADORA'
+print('\n' + titulo)
+print('=' * len(titulo))
 ciclo = True
 
 while ciclo == True:
@@ -68,7 +70,7 @@ while ciclo == True:
             a,b = pedir_datos()
             operacion = ''
 
-            if a and b != False:
+            if a and b != None:
                 if opcion == '1':
                     operacion = '+'
                     valor = suma(a,b)
