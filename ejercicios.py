@@ -27,7 +27,9 @@ def menu_principal():
             elif opcion == '2':
                 buen_dia()
             elif opcion == '3':
-                pass
+                factorial()
+            elif opcion == '4':
+                promedio()
             elif opcion == '0':
                 print('Saliendo del sistema...')
                 break
@@ -41,8 +43,14 @@ def buen_dia():
     nombre_usuario = input('Ingrese su nombre ')
     print('Buen día' , nombre_usuario, '!')
 
+def factorial():
+    numero = int(input('Ingrese un número entero: '))
+    resultado = 1
+    for valor in range(1,numero + 1):
+        resultado = resultado * valor
+    print (f'{numero}! = {resultado}')
 
-    
-
+def promedio():
+    pass
 
 menu_principal()
